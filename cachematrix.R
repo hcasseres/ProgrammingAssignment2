@@ -4,15 +4,10 @@
 ## input is a matrix
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
-#     set <- function(y) {
-#         x <<- y
-#         inv <<- NULL
-#     }
     get <- function () x # return the original matrix
     setinv <- function(solve) inv <<- solve # will be called by cacheSolve
     getinv <- function() inv # return the inverse matrix
-    list(set = set, # return the methods in this object
-         get = get,
+    list(get = get, # return the methods in this object
          setinv = setinv,
          getinv = getinv)
 }
